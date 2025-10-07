@@ -11,7 +11,7 @@ const Product = () => {
     : data;
   return (
     <div className="min-h-[70vh] mx-auto max-w-6xl py-6">
-      <div className="flex justify-between p-2">
+      <div className="flex justify-between px-4 items-center">
         <h1 className="text-2xl font-bold pb-4">All Products</h1>
         <label className="input">
           <svg
@@ -38,6 +38,9 @@ const Product = () => {
             placeholder="Search product here"
           />
         </label>
+        <h1 className="text-2xl font-semibold p-4">
+          Total items : {searchedProduct.length}
+        </h1>
       </div>
       <div className="grid grid-cols-1 p-6 md:grid-cols-3 gap-6">
         {searchedProduct.map((product) => (
