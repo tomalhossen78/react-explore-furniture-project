@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturedProducts from "../../Componets/FeaturedProducts/FeaturedProducts";
 import { useLoaderData } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 const Home = () => {
   const data = useLoaderData();
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <div className="min-h-[70vh] mx-auto max-w-6xl py-6">
       <FeaturedProducts data={data} />
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

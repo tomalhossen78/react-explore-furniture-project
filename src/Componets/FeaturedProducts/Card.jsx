@@ -1,24 +1,13 @@
 import React from "react";
 import { Link } from "react-router";
 import { setDataLs } from "../../Utility/LS";
-import { Slide, ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 const Card = ({ product }) => {
+  const { category, description, image, name, price, material, id } = product;
   const handleCart = (id) => {
     setDataLs(id);
-    toast.success("Add to Cart Successfully!", {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Slide,
-    });
   };
-  const { category, description, image, name, price, material, id } = product;
   return (
     <div>
       <div className="card bg-base-100 shadow-md">
